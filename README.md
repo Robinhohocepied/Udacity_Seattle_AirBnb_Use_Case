@@ -1,5 +1,5 @@
-# Marketing Analytics for a Food Delivery Platform
-#### [_Udacity - Data Analyst Nanodegree:_](https://www.udacity.com/course/data-analyst-nanodegree--nd002) _Project 5 - Data Visualization_
+# [Pricing Analytics for a Home Sharing Platform -----> Blog ](https://medium.com/@robinhocepied/how-to-set-your-next-airbnb-listing-price-smartly-589b49f97cf1)
+#### [_Udacity - Data Scientist Nanodegree:_](https://www.udacity.com/school-of-data-science) _Project: Writing a Data Scientist Blog Post_
 ## Table of Contents
 
 1. [Project Overview](#project)
@@ -10,12 +10,16 @@
 6. [Acknowledgements](#acknowledgements)
 
 ### 1. Project Overview<a id="project"></a>
-This project has two parts to demonstrate the importance and data visualization techniques in the data analysis process.
+This project has three parts to demonstrate the ability to analyze, visualize and model data acoridng to business-driven questions.
 
-- Part 1: **Exploratory** data visualization\
-    I used Python visualization libraries to systematically explore a dataset, starting from plots of single variables and building up to plots of multiple variables.
-- Part 2: **Explanatory** data visualization\
-    I produced a short presentation to illustrate interesting properties, trends, and relationships discovered in my dataset. The primary method of conveying my findings was through transforming the exploratory visualizations from part 1 into polished explanatory visualizations.
+- Part 1: **Exploratory and Explanatory:** Visualization\
+    I used Python visualization libraries to systematically explore a dataset, starting from plots of single variables and building up to plots of multiple variables
+    
+- Part 2: **Modelization:** Prediction\
+    I ran 10 models to predict the prices of the Airbnb listings based on a set of cleaned features
+    
+- Part 3: **Communicate Findings:**[ Blog in Medium](https://medium.com/@robinhocepied/how-to-set-your-next-airbnb-listing-price-smartly-589b49f97cf1) and Repo in Github
+    I documented the results in a Github repo and gathered all the main insights in a non-technical blog article in Medium
 
 ### 2. Requirements<a id="requirements"></a>
 This project was created in a Jupyter Notebook made available via Anaconda and written in python. 
@@ -29,7 +33,15 @@ The following versions of languages and libraries were used in creating this pro
 ### 3. Project Motivation<a id="motivation"></a>
 
 #### Scenario:
-Working as a data analyst for an online food ordering and food delivery platform, I've been told by the Chief Marketing Officer that recent marketing campaigns have not been as effective as they were expected to be. I will analyze the data set to understand this problem and propose data-driven insights and recommendations.
+As a young professional looking to boost his "Data" career progression I have personally made the choice to move to Seattle next year. This decision was made after some thorough research, where I came to realize Seattle matched every aspect of the lifestyle I wanted to have as a young professional seeking to have an impact in the tech world while having the time to explore the beauty of nature surrounding the city.
+
+Being a couple months away from the move I decided I would spend 2 weekends in Seattle to explore areas where I would feel "at home" and compare neighbourhoods/regions based on a set of criteria that would help me derive the best decision further in time.
+
+Having a bit of free-time, I pushed myself to enroll in a personal challenge: Explore Airbnb Listings Data to create an in-depth understanding of when, where, and what makes the difference in pricing when it comes to rent a property in Airbnb.com. This came right in time, as I always back-up my personal moves/choices wiht some prior rational investigation. Tu put it in another way, moving to Seattle would mean a tighter management of my expenses, this meant, sacrificing some of my personal wishes, such as settling in a artistic neighbourhood, logically the more expensive ones, to find the adequate balance in terms of spending and finding the best location possible.
+
+While reflecting on this exploration, questions started bumping into my mind.. What if I could rent a 2-bedroom place and start renting it on Airbnb, how big of a risk would this be? How are properties priced and how are prices spread out based on location? Are there any high and low seasons in the renting ecosystem? What could influence the pricing?
+
+These helped somehow frame the analysis and write some important key guidelines to keep in mind while making progress.
 
 As per Udacity, after completing this project, I was able to:
 - Supplement statistics with visualizations to build an understanding of the data.
@@ -37,55 +49,28 @@ As per Udacity, after completing this project, I was able to:
 - Use design principles to create effective visualizations for communicating findings to an audience.
 
 ### 4. Key Files<a id="files"></a>
-- `marketing_data.csv`\
-Rather than use a tidy dataset provided by Udacity, I chose an external dataset because of its connection to sales and marketing--a topic I am interested in. This dataset was downloaded from a [kaggle dataset](https://www.kaggle.com/jackdaoud/marketing-data) and consists of 2,240 customers of an online food ordering and food delivery platform. The dataset contains data on:
-    - Customer profiles
-    - Product preferences
-    - Campaign successes/failures
-    - Channel performance
+- `calendar.csv`
+- `listings.csv`
+- `reviews.csv`
+- `Seattle_Airbnb_Exploration_Modelling.ipynb`
+
     
-    The data was untidy and required thorough cleaning. The final, tidy dataset is saved as `marketing_cleaned.csv`.
-
-- `Part_I_exploration.ipynb` and `Part_I_exploration.html`\
-In part 1, exploratory data analysis, I conducted the bulk of my project in a Jupyter Notebook. Everything from assessing, wrangling, cleaning, and exploring the data was done here. As per the assignment, I structured my exploratory analysis sequentially from univariate analysis, bivariate analysis, then finally to multivariate analysis. I was searching for correlations relationships between many of the numerical and categorical variables which lead to the creation of over 30 visualizations. 
-
-- `Part_II_slide_deck.ipynb` and `Part_II_slide_deck.slides.html`\
-In part 2, explanatory data analysis, I selected the visualizations that could be grouped together to form clear insights. From the jupyter notebook, I created a slide deck to easily communicate my findings and recommendatsions to the Chief Marketing Officer. 
-
 ### 5. Summary of Findings<a id="summary"></a>
 
-- There was a strong positive relationship between income and educational level.
-- Wine was the most popular product, amounting to over 50% of sales. 
-- Doctorates particularly enjoy wine. Doctorates from Germany especially. 
-- Out of the 7 countries survey, a huge majority come from Spain, which perhaps accounts for the popularity of wine and meat.
-- Surprisingly, those with 0 dependents had the highest income, and therefore spent the most and made the most purchases.
-- Unsurprisingly, those with only high school education made fewer purchases and spent less in general.
-- The most recent campaign was the most successful while #2 campaign was the least successful.
-- Most customers still preferred shopping in-store rather than using catalogs.
+- There is a strong Seasonality pattern in the average prices evolution over time. July and August have the highest average prices, indicating weather and rainfall % play an important role in the seasonal offering. Drilling down to the weekly view, as we would expect, Fridays and Saturdays are the most "profitable" days from a lender's perspective.
 
-### Key Insights for the Slide-Deck Presentation
+- Neighbourhood wise, most of the listings are located in the central area of Seattle between Elliot Bay and Lake Washington. The listings with the highest average prices stand close to the central west part, bordering the Elliot Bay and the Puget Sound. West tends to be more expensive than the East, while the South part is less expensive than the North. The prices range from 80 to 180 dollars a night.
 
-There were many threads to explore but I settled on 4 specific metrics to analyze. The number on the bulleted lists correspond to the sequence and title of the visualizations as they appeared in `Part_I_exploration.ipynb`.
+- If we look at the Types of Properties, listings are mostly entire homes or appartments, representing 2/3 of the listings. These are 2 to 3 times more expensive than its counterparts (Private and Shared Room) standing at 156 dollars.
 
-1. Campaign success
-    - #14 Number of campaign success and success rate (horizontal bar plots)
-    - #25 Relationship between campaign success rate and country (facetted horizontal bar plots)
-2. Sales channel
-    - #11 Number of purchases by sales channel (histograms)
-    - #12 Share of purchases by sales channel (horizontal bar plot)
-    - #13 Average number of purchases per channel per ID (horizontal bar plot)
-3. Purchasing trends
-    - #8 Average amount spent per product per customer (horizontal bar plot)
-    - #9 Share of spending by product type (horizontal bar plot)
-4.  Number of dependents
-    - #10 Number of dependents per household (bar plots)
-    - #21 Correlation between numerical variables (heat map)
-    - #22 Income, total amount spent, and total purchases vs number of dependents (regression plots)
-    - #32 Relationship between income, total amount spent, and the number of dependents (categorical scatter plot)
+- Houses and Apartments account for 90% of the Property Types (16 Types) in the Airbnb listings, with no major difference in the number of listings. All Property types display similar Average Prices, ranging from 95 to 150 dollars (3 exceptions), the most interesting one is the Boat type (first in the list) which seems to be a luxury niche with an Average Price at almost 300 dollars a night.
 
-Please see my [slide deck](https://keenan-cooper.github.io/Marketing-Analytics-for-a-Food-Delivery-Platform/Part_II_slide_deck.html) for an executive summary with the above visualizations.
+- Almost half of the Airbnb listings can Accomodate 2 people. Directly followed by 4 and 3 people acounting in total for ~+30% of the listings. This means ~+70% of the Airbnb listings can accomodate not more than a 4-people household. The relationship between the number of accomodates is quite linear in terms of prices, the highest the average price the highest the number of people we can accomodate, with one or two exceptions (however not significant in number of listings)
+
+- For the Prediction of the Listing Price, the Linear Regression offers us the best results if we bear in mind interpretability and results of the 10 models. We get respectively an R-Square of 0.546 and 0.543 for the training and test set. In terms of Interpretability, the feature "Room type/Entire Home/Appartment" displays the highest coefficient (27.41), followed by Bedrooms (20.13) and Cleaning Fee (16.87). To conclude, we are not too enthusiastic about these results. If further improvements were to be done, we could eventually tweak the analysis by optimizing and/or improve the features and hyper parameters embedded in this model to slightly boost the performance.
+
+
+
 
 ### 6. Acknowledgements<a id="acknowledgements"></a>
-This project was completed as part of the Udacity's [Data Analyst Nanodegree](https://github.com/keenan-cooper/WeRateDogs-Twitter-Data-from-2015-to-2017/files/7847764/nd002-syllabus_2018-June_v9.pdf).\
-Credit to Dr. Omar Romero-Hernandez for providing this [kaggle dataset](https://www.kaggle.com/jackdaoud/marketing-data) for his students. And credit to Jack Daoud for uploading and maintaining this data on Kaggle.
-
+This project was completed as part of the Udacity's [Data Science Nanodegree](https://www.udacity.com/school-of-data-science).
