@@ -18,7 +18,7 @@ This project has three parts to demonstrate the ability to analyze, visualize an
 - Part 2: **Modelization:** Prediction\
     I ran 10 models to predict the prices of the Airbnb listings based on a set of cleaned features
     
-- Part 3: **Communicate Findings:**[ Blog in Medium and Repo in Github](https://medium.com/@robinhocepied/how-to-set-your-next-airbnb-listing-price-smartly-589b49f97cf1) 
+- Part 3: **Communicate Findings:**[ Blog in Medium and Repo in Github](https://medium.com/@robinhocepied/how-to-set-your-next-airbnb-listing-price-smartly-589b49f97cf1)\ 
     I documented the results in a Github repo and gathered all the main insights in a non-technical blog article in Medium
 
 ### 2. Requirements<a id="requirements"></a>
